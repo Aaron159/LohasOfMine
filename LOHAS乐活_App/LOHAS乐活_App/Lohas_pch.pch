@@ -1,0 +1,61 @@
+//
+//  Lohas_pch.pch
+//  仿LOHAS生活App
+//
+//  Created by mac51 on 9/12/16.
+//  Copyright © 2016 Aaron. All rights reserved.
+//
+
+#ifndef Lohas_pch_pch
+#define Lohas_pch_pch
+
+//-----------------------第三方授权-------------------
+//SinaWeibo SDK
+#import "SinaWeibo.h"
+//微博对象获取
+#define kSinaWeiboObject (((AppDelegate *)[UIApplication sharedApplication].delegate).sinaWeibo)
+//------------------------Header------------------------
+#import "AFNetworking.h"
+#import "LohasModel.h"
+#import "YYModel.h"
+#import "UIImageView+WebCache.h"
+#import "UIViewExt.h"
+#import "WXLabel.h"
+#import "IsLoginManager.h"
+#import "LoginViewController.h"
+#import "SendViewController.h"
+#import "MBProgressHUD.h"
+//------------------------宏定义------------------------
+
+//系统版本号  CGFloat
+#define kSystemVersion ([[UIDevice currentDevice].systemVersion floatValue])
+
+//屏幕宽高
+#define kScreenWidth ([UIScreen mainScreen].bounds.size.width)
+#define kScreenHeight ([UIScreen mainScreen].bounds.size.height)
+
+
+//uid保存到本地
+#define kLohasUidSave @"kLohasUidSave"
+#define kLohasUseIDSave @"kLohasUseIDSave"
+#define kLohasTokenSave @"kLohasTokenSave"
+#define kAccess_tokenSave @"kAccess_tokenSave"
+#define kBgColor @"kBgColor"
+
+//通知名称
+#define kNotifacationBgColor @"kNotifacationBgColor"
+
+#define kSquareTextFont [UIFont systemFontOfSize:17]
+
+#define kBlackColorItem ([UIColor blackColor])
+#define kGreenColorItem ([UIColor greenColor])
+
+//颜色宏定义
+#define RGBA(r, g, b, a)  [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
+#define RGB(r, g, b)       RGBA(r, g, b, 1.0f)
+
+#define reddishBlueColor RGB(65, 105, 225)
+
+#define fenxiangColor RGB(210, 105, 30)
+
+#endif /* Lohas_pch_pch */
